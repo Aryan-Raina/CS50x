@@ -1,0 +1,25 @@
+
+do
+ask user an integer n for the value of height
+assume a variable i = 1
+assume a variable j = 1
+assume a variable k = 1
+
+
+loop until i = n
+{
+loop until j = n - i 
+{
+print " "
+j++
+}
+loop until k = i
+{
+print "#"
+k++
+}
+n++
+switch to nect line
+}
+
+while n < 1
