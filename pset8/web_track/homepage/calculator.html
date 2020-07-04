@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet">
+        <title>OhMy! Calculator</title>
+    </head>
+    <body>
+        <h1 class="display-4" style="font-weight: 700;">OhMy!Calculator.com</h1>
+        <hr class="titlebottom">
+        <input type="number" id="num1">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" onclick="begin(); add()">Add</a>
+              <a class="dropdown-item" onclick="begin(); subtract()">Subtract</a>
+              <a class="dropdown-item" onclick="begin(); multiply()">Multiply</a>
+              <a class="dropdown-item" onclick="begin(); divide()">Divide</a>
+              <a class="dropdown-item" onclick="begin(); power()">Raised To</a>
+              <a class="dropdown-item" onclick="begin(); base()">Base</a>
+            </div>
+          </div>
+        <input type="number" id="num2">
+        <div>
+            <p>= </p>
+            <p id="ans" class="nice"></p>
+        </div>
+        <input type="button" onclick="location.href = 'index.html'" value="Go Back To Homepage!" class="btn btn-primary">
+        <script>
+            function begin()
+            {
+                num1 = parseFloat(document.getElementById('num1').value);
+                num2 = parseFloat(document.getElementById('num2').value);
+                ans = document.getElementById('ans');
+            }
+            function add()
+            {
+                ans.innerHTML = (num1 + num2).toString(10);
+            }
+            function subtract()
+            {
+                ans.innerHTML = (num1 - num2).toString(10);
+            }
+            function multiply()
+            {
+                ans.innerHTML = (num1 * num2).toString(10);
+            }
+            function divide()
+            {
+                ans.innerHTML = (num1 / num2).toString(10);
+            }
+            function power()
+            {
+                ans.innerHTML = (Math.pow(num1, num2)).toString(10);
+            }
+            function base()
+            {
+                ans.innerHTML = num1.toString(num2);
+            }
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>
